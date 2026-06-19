@@ -1,0 +1,26 @@
+# Lecture 06 - Input in Java
+
+## Topics Covered
+
+* Scanner Class
+* nextInt()
+* next()
+* nextLine()
+* Taking User Input
+
+## Key Points
+
+* Scanner is used to take input from the user.
+* nextInt() reads integer values.
+* next() reads a single word.
+* nextLine() reads an entire line.
+
+## Programs Practiced
+
+* Age Input
+* Name Input
+* Full Name Input
+
+## Status
+
+✅ Completed
