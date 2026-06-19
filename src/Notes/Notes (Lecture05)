@@ -1,0 +1,25 @@
+# Lecture 05 - Loops
+
+## Topics Covered
+
+* for loop
+* while loop
+* do-while loop
+
+## Key Points
+
+* Loops are used to repeat a block of code.
+* for loop is used when the number of iterations is known.
+* while loop checks the condition before execution.
+* do-while loop executes at least once before checking the condition.
+
+## Programs Practiced
+
+* Print numbers from 1 to 5
+* for loop example
+* while loop example
+* do-while loop example
+
+## Status
+
+✅ Completed
