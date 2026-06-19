@@ -1,0 +1,27 @@
+# Lecture 04 - Variables
+
+## Topics Covered
+
+- What is a Variable?
+- Variable Declaration
+- Variable Initialization
+- Updating Variable Values
+- Using Variables in Calculations
+
+## Syntax
+
+datatype variableName = value;
+
+Example:
+int age = 21;
+
+## Key Points
+
+- Variables store data.
+- Variable values can be changed.
+- Java is a statically typed language.
+- int is used for integer values.
+
+## Status
+
+Completed ✅
