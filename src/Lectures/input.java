@@ -1,3 +1,5 @@
+package Lectures;
+
 import java.util.*;
 
 public class input{
