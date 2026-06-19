@@ -1,9 +1,8 @@
 package Lectures;
-import java.util.*;
 
 import java.util.Scanner;
 
-public class Lecture1 {
+public class Lecture01 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
