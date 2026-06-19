@@ -1,0 +1,19 @@
+# Lecture 02 - How to Print Output in Java
+
+## Topics Covered
+
+- System.out.println()
+- System.out.print()
+- Printing Text
+- Printing Numbers
+- Printing Expressions
+
+## Key Points
+
+- println() prints and moves to next line.
+- print() prints on same line.
+- Java evaluates arithmetic expressions before printing.
+
+## Status
+
+Completed ✅
