@@ -1,0 +1,28 @@
+# Lecture 04 - Conditional Statements
+
+## Topics Covered
+
+* if statement
+* if-else statement
+* if-else-if ladder
+* Nested if
+* Comparison operators
+* Logical operators
+
+## Key Points
+
+* Conditional statements are used for decision making.
+* `if` executes code when a condition is true.
+* `if-else` handles two possible outcomes.
+* `if-else-if` is used for multiple conditions.
+* Nested `if` means an if statement inside another if statement.
+
+## Programs Practiced
+
+* Voting Eligibility Check
+* Even/Odd Number
+* Grade Calculator
+
+## Status
+
+✅ Completed
