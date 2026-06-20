@@ -4,6 +4,12 @@ import java.util.*;
 public class questionspratices {
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
+
+
+// Q1-- Check number is Prime or Not..........
+
+
+/*
         System.out.print("Enter number: ");
         int t = scn.nextInt();
 
@@ -26,6 +32,39 @@ public class questionspratices {
                 System.out.println("not prime");
             }
         }
+
+
+ */
+
+// Q2-- Print all prime number upto n......
+
+        System.out.print("Enter nnumber: ");
+        int n = scn.nextInt();
+
+        for(int num = 2; num <= n; num++) {
+            boolean isPrime = true;
+
+            for(int div = 2; div * div <= num; div++) {
+                if(num % div == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if(isPrime) {
+                System.out.print(num + " ");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
 
     }
 
