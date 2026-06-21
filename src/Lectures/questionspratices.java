@@ -34,7 +34,7 @@ public class questionspratices {
         }
 
 
- */
+
 
 // Q2-- Print all prime number upto n......
 
@@ -56,6 +56,26 @@ public class questionspratices {
             }
         }
 
+
+
+// Q3-- Print all Fibonacci Series upto n.........
+
+        System.out.print("Enter number: ");
+        int a = scn.nextInt();
+
+        int first =0;
+        int second =1;
+
+        for(int i=0;i<=a;i++){
+            System.out.print(first+" ");
+            int c = first + second;
+            first = second;
+            second = c;
+
+
+        }
+
+ */
 
 
 
