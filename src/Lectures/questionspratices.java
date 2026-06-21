@@ -78,6 +78,16 @@ public class questionspratices {
  */
 
 
+// Q3-- Print the number of digit in a give input......
+
+        System.out.print("Enter a number: ");
+        int n = scn.nextInt();
+        int digit =0;
+        while(n!=0){
+            n=n/10;
+            digit++;
+        }
+        System.out.print("Total number of Digits: "+digit);
 
 
 
