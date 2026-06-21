@@ -75,10 +75,9 @@ public class questionspratices {
 
         }
 
- */
 
 
-// Q3-- Print the number of digit in a give input......
+// Q4-- Print the number of digit in a give input......
 
         System.out.print("Enter a number: ");
         int n = scn.nextInt();
@@ -89,6 +88,32 @@ public class questionspratices {
         }
         System.out.print("Total number of Digits: "+digit);
 
+
+ */
+
+// Q5-- Print all the Digit of the number.......
+
+        System.out.print("Enter a number: ");
+        int n = scn.nextInt();
+
+        int temp=n;
+        int digits =0;
+        while(temp > 0) {
+            digits++;
+            temp = temp / 10;
+        }
+
+        // Create divisor
+        int div = (int)Math.pow(10, digits - 1);
+
+        // Print digits
+        while(div > 0) {
+            int digit = n / div;
+            System.out.println(digit);
+
+            n = n % div;
+            div = div / 10;
+        }
 
 
 
