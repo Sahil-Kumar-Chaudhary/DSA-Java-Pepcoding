@@ -89,7 +89,7 @@ public class questionspratices {
         System.out.print("Total number of Digits: "+digit);
 
 
- */
+
 
 // Q5-- Print all the Digit of the number.......
 
@@ -115,6 +115,9 @@ public class questionspratices {
             div = div / 10;
         }
 
+ */
+
+//
 
 
 
