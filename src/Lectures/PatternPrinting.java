@@ -7,6 +7,8 @@ public class PatternPrinting {
 
 
 
+/*
+
 // Q1-- Print the pattern upto n....
 //      n=5
 //        *
@@ -20,6 +22,25 @@ public class PatternPrinting {
 
         for(int row = 1; row <= n; row++) {
             for(int star = 1; star <= row; star++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+ */
+// Q2-- Print the pattern upto n....
+//        n=5
+//        * * * * *
+//        * * * *
+//        * * *
+//        * *
+//        *
+
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+
+        for(int row = 1; row <= n; row++) {
+            for(int star = n; star >= row; star--) {
                 System.out.print("* ");
             }
             System.out.println();
