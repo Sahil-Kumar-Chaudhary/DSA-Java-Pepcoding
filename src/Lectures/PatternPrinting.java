@@ -27,7 +27,7 @@ public class PatternPrinting {
             System.out.println();
         }
 
- */
+
 // Q2-- Print the pattern upto n....
 //        n=5
 //        * * * * *
@@ -45,6 +45,34 @@ public class PatternPrinting {
             }
             System.out.println();
         }
+
+ */
+// Q3-- Print the pattern upto n....
+//        n=5
+//                *
+//              * *
+//            * * *
+//          * * * *
+//        * * * * *
+
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+
+        for(int row = 1; row <= n; row++) {
+
+            // Print spaces
+            for(int sp = 1; sp <= n - row; sp++) {
+                System.out.print("  ");
+            }
+
+            // Print stars
+            for(int star = 1; star <= row; star++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
 
 
 
