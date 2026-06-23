@@ -72,8 +72,6 @@ public class PatternPrinting {
 
             System.out.println();
         }
-
- */
 // Q4-- Print the pattern upto n....
 //        n=5
 //        * * * * *
@@ -99,6 +97,10 @@ public class PatternPrinting {
 
             System.out.println();
         }
+
+
+ */
+
 
 
 
