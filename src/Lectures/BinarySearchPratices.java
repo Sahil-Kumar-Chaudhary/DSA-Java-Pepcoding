@@ -1,4 +1,5 @@
 package Lectures;
+import java.util.*;
 
 public class BinarySearchPratices {
     public static void main(String[] args){
@@ -53,7 +54,7 @@ public class BinarySearchPratices {
         System.out.println("Index: " + start);
 
 
- */
+
 
         int[] arr = {4, 2, 8, 6};
         int target = 6;
@@ -85,7 +86,82 @@ public class BinarySearchPratices {
             }
         }
 
+// Kaden's Algo
 
+        int[] arr={1,2,1,-1,2,-6,5};
+         for (int i = 0; i < arr.length; i++) {
+             for (int j = i; j < arr.length; j++) {
+                 int sum =0;
+
+                 for (int k = i; k <= j; k++) {
+                     System.out.print(arr[k] + " ");
+                     sum+=arr[k];
+
+                 }
+                 System.out.print(" ="+sum);
+                 System.out.println();
+             }
+         }
+
+        int currentSum = 0;
+        int maxSum = 0;
+
+        for(int i = 0; i < arr.length; i++) {
+            currentSum += arr[i];
+
+            if(currentSum > maxSum) {
+                maxSum = currentSum;
+            }
+
+            if(currentSum < 0) {
+                currentSum = 0;
+            }
+        }
+
+        System.out.println("Maximum Sum = " + maxSum);
+
+        int startIndex = 0;
+        int endIndex = 0;
+        int tempStart = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            currentSum += arr[i];
+
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+                startIndex = tempStart;
+                endIndex = i;
+            }
+
+            if (currentSum < 0) {
+                currentSum = 0;
+                tempStart = i + 1;
+            }
+        }
+
+        System.out.println("Maximum Sum = " + maxSum);
+        System.out.println("Start Index = " + startIndex);
+        System.out.println("End Index = " + endIndex);
+
+ */
+//  Finding next greatest number...............................................
+
+                int[] arr = {6, 8, 0, 1, 3};
+
+                Stack<Integer> st = new Stack<>();
+
+                for(int i=0;i<arr.length-1;i++){
+                    if(arr[i]<arr[i+1]){
+                        st.push(arr[i+1]);
+                    }else{
+                        st.push(-1);
+                    }
+
+                }
+                st.push(-1);
+
+                System.out.print(st);
 
 
 
