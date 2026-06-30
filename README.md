@@ -1,13 +1,13 @@
-# 🚀 DSA in Java - Pepcoding Journey
+# 🚀 DSA in Java - GeeksforGeeks Journey
 
 ## 👨‍💻 About This Repository
 
-This repository contains my solutions, notes, and practice problems while learning Data Structures and Algorithms using the Pepcoding DSA Java course.
+This repository contains my solutions, notes, and practice problems while learning Data Structures and Algorithms from the GeeksforGeeks playlist "DSA In Java | Java In One Shot | Complete DSA In Java | DSA By Raghav Sir".
 
 🎓 Student: Sahil Kumar Chaudhary  
 🏫 B.Tech CSE, Lovely Professional University  
 💻 Language: Java  
-📚 Course: Pepcoding DSA Foundation
+📚 Course: GeeksforGeeks DSA In Java
 
 ---
 
@@ -145,7 +145,7 @@ Completed Topics: 0
 
 Current Topic: Getting Started
 
-Target: Complete entire Pepcoding DSA Foundation Course
+Target: Complete the GeeksforGeeks DSA In Java playlist
 
 ---
 
