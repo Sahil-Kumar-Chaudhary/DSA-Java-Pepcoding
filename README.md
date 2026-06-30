@@ -104,29 +104,33 @@ This repository contains my solutions, notes, and practice problems while learni
 - [ ] LIS
 - [ ] DP Problems
 
+## 🧭 Current File Mapping
+
+- [x] `Lecture01.java` - Input and output basics
+- [x] `Lecture02.java` - Console printing and patterns
+- [x] `Lecture03.java` - Variables and arithmetic operations
+- [x] `Lecture04.java` - Conditional statements
+- [x] `Lecture05.java` - Loops
+- [x] `Lecture06.java` - Scanner-based input handling
+- [x] `PatternPrinting.java` - Pattern practice
+- [x] `BinarySearchPratices.java` - Binary search and array practice
+- [x] `questionspratices.java` - Prime, Fibonacci, and digit problems
+- [x] `Neetcodepractices.java` - Array practice problems
+- [x] `Linkedlist.java` - Linked list basics
+- [x] `tree.java` - Binary tree basics
+
 ---
 
 ## 📁 Repository Structure
 
 ```text
-DSA-Java-Pepcoding
+DSA-Java-GeeksforGeeks
 │
-├── Basics
-├── Patterns
-├── FunctionsAndArrays
-├── NumberSystem
-├── Strings
-├── Recursion
-├── TimeAndSpace
-├── LinkedList
-├── Stack
-├── Queue
-├── Trees
-├── Graphs
-├── HashMapAndHeap
-├── DynamicProgramming
-├── PracticeProblems
-└── Notes
+├── src
+│   ├── Lectures
+│   └── Notes
+├── DSA.iml
+└── README.md
 ```
 
 ---
