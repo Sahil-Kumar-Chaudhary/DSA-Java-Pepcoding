@@ -204,3 +204,201 @@ int ans = maximum(4,8);
 
 ---
 
+# Return Statement
+
+The `return` statement immediately ends the method and sends the value back to the caller.
+
+Example
+
+```java
+return 10;
+```
+
+Everything after `return` is unreachable.
+
+Wrong
+
+```java
+return 10;
+System.out.println("Hello");
+```
+
+---
+
+# Multiple Return Statements
+
+Allowed
+
+```java
+if(a>10)
+    return 10;
+else
+    return 9;
+```
+
+Every execution path of a non-void method must return a value.
+
+Wrong
+
+```java
+if(a>10)
+    return 10;
+```
+
+Compiler Error
+
+```
+Missing return statement
+```
+
+---
+
+# Local Variables
+
+Variables declared inside a method are called **Local Variables**.
+
+Example
+
+```java
+public static int fact(int n) {
+    int ans = 1;
+}
+```
+
+`ans` exists only inside `fact()`.
+
+---
+
+# Variable Scope
+
+Variables declared inside a method cannot be accessed outside it.
+
+Example
+
+```java
+public static void sum() {
+    int x = 5;
+}
+```
+
+Wrong
+
+```java
+System.out.println(x);
+```
+
+---
+
+# Calling Methods
+
+Methods can call other methods.
+
+Example
+
+```java
+print();
+sum(5,6);
+maximum(4,9);
+```
+
+---
+
+# Built-in Math Methods
+
+### Square Root
+
+```java
+Math.sqrt(25);
+```
+
+Output
+
+```
+5.0
+```
+
+### Cube Root
+
+```java
+Math.cbrt(125);
+```
+
+Output
+
+```
+5.0
+```
+
+### Absolute Value
+
+```java
+Math.abs(-50);
+```
+
+Output
+
+```
+50
+```
+
+### Maximum
+
+```java
+Math.max(10,20);
+```
+
+Output
+
+```
+20
+```
+
+### Minimum
+
+```java
+Math.min(10,20);
+```
+
+Output
+
+```
+10
+```
+
+### Floor
+
+```java
+Math.floor(2.9);
+```
+
+Output
+
+```
+2.0
+```
+
+### Round
+
+```java
+Math.round(2.6);
+```
+
+Output
+
+```
+3
+```
+
+### Power
+
+```java
+Math.pow(2,5);
+```
+
+Output
+
+```
+32.0
+```
+
+---
