@@ -402,3 +402,170 @@ Output
 ```
 
 ---
+
+# Factorial Method
+
+```java
+public static int fact(int n){
+    int ans = 1;
+
+    for(int i=1;i<=n;i++){
+        ans *= i;
+    }
+
+    return ans;
+}
+```
+
+Example
+
+```
+5! = 120
+```
+
+Time Complexity
+
+```
+O(n)
+```
+
+Space Complexity
+
+```
+O(1)
+```
+
+---
+
+# Combination (nCr)
+
+### Formula
+
+```
+nCr = n! / (r! × (n-r)!)
+```
+
+Java Code
+
+```java
+int ncr = fact(n)/(fact(r)*fact(n-r));
+```
+
+Example
+
+```
+5C2
+
+= 120/(2×6)
+
+= 10
+```
+
+---
+
+# Permutation (nPr)
+
+### Formula
+
+```
+nPr = n! / (n-r)!
+```
+
+Java Code
+
+```java
+int npr = fact(n)/fact(n-r);
+```
+
+Example
+
+```
+5P2
+
+= 120/6
+
+= 20
+```
+
+---
+
+# Important Points
+
+- A method can call another method.
+- A method can have zero or many parameters.
+- A method can return only one value.
+- `void` methods do not return anything.
+- Non-void methods must return a value on every execution path.
+- Parameters are local variables.
+- Methods improve readability and code reuse.
+- Static methods can be called directly from `main()`.
+
+---
+
+# Interview Questions
+
+### 1. What is a method?
+
+A method is a reusable block of code that performs a specific task.
+
+---
+
+### 2. Difference between Parameters and Arguments?
+
+Parameters are variables in the method definition.
+
+Arguments are actual values passed during the method call.
+
+---
+
+### 3. Difference between `void` and `int` methods?
+
+- `void` returns nothing.
+- `int` returns an integer value.
+
+---
+
+### 4. Why is `return` important?
+
+It sends a value back to the caller and immediately terminates the method.
+
+---
+
+### 5. Why do we write `static`?
+
+Because `main()` is static and can directly call only static methods without creating an object.
+
+---
+
+### 6. What is the time complexity of the factorial method?
+
+```
+O(n)
+```
+
+---
+
+### 7. Can a method return two values?
+
+No. A Java method returns only one value directly. To return multiple values, return an object, array, or collection.
+
+---
+
+### 8. What happens if a non-void method doesn't return a value?
+
+The compiler throws a **Missing return statement** error.
+
+---
+
+# Quick Revision
+
+- Method = Reusable block of code.
+- `void` = No return value.
+- `return` = Sends value back.
+- Parameters = Variables.
+- Arguments = Actual values.
+- Static methods are called without creating an object.
+- Local variables exist only inside the method.
+- Factorial Time Complexity = **O(n)**.
+- Combination Formula = **n! / (r!(n-r)!)**
+- Permutation Formula = **n! / (n-r)!**

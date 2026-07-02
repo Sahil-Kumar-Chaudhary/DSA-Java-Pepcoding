@@ -71,5 +71,19 @@ public class Methods {
         System.out.println(x);
         System.out.println(maximum(12,6));
 
+        System.out.print("Enter the value of n and r: ");
+        int n = sc.nextInt();
+        int r = sc.nextInt();
+
+        int ncr = fact(n) / (fact(r) * fact(n-r));
+        System.out.println(ncr);
+        
+        int npr =  fact(n)/fact(n-r);
+        System.out.print(npr);
+        
+
+        
+
     }
+    
 }
