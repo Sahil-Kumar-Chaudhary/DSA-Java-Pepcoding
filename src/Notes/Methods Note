@@ -1,0 +1,206 @@
+# 📚 DSA in Java – Methods (Functions)
+
+## What is a Method?
+
+A **method** (also called a **function**) is a block of code that performs a specific task. Instead of writing the same code multiple times, we write it once inside a method and call it whenever needed.
+
+### Advantages
+- Code Reusability
+- Reduces code duplication
+- Makes code modular
+- Easy to debug and maintain
+- Improves readability
+
+---
+
+# General Syntax
+
+```java
+returnType methodName(parameters) {
+    // code
+    return value;
+}
+```
+
+Example
+
+```java
+public static int sum(int a, int b) {
+    return a + b;
+}
+```
+
+---
+
+# Parts of a Method
+
+```java
+public static int maximum(int x, int y)
+```
+
+## 1. Access Modifier
+
+```java
+public
+```
+
+Specifies where the method can be accessed.
+
+Common modifiers:
+- public
+- private
+- protected
+
+---
+
+## 2. Static Keyword
+
+```java
+static
+```
+
+A static method belongs to the class rather than an object.
+
+Since `main()` is static, it can directly call other static methods.
+
+Without `static`
+
+```java
+Methods obj = new Methods();
+obj.maximum(5,10);
+```
+
+---
+
+## 3. Return Type
+
+```java
+int
+```
+
+Defines what the method returns.
+
+Examples:
+- int
+- double
+- char
+- boolean
+- String
+- void
+
+---
+
+## 4. Method Name
+
+```java
+maximum
+```
+
+Should describe the work performed.
+
+Examples:
+- sum()
+- fact()
+- maximum()
+- print()
+
+---
+
+## 5. Parameters
+
+```java
+(int x, int y)
+```
+
+Variables that receive values when the method is called.
+
+---
+
+# Method Calling
+
+Method Definition
+
+```java
+public static void print() {
+    System.out.println("Hello");
+}
+```
+
+Method Call
+
+```java
+print();
+```
+
+---
+
+# Parameters vs Arguments
+
+Method
+
+```java
+sum(int a, int b)
+```
+
+`a` and `b` are **Parameters**
+
+Method Call
+
+```java
+sum(5,10);
+```
+
+`5` and `10` are **Arguments**
+
+**Remember:**
+- Parameters → Variables in method definition.
+- Arguments → Actual values passed during method call.
+
+---
+
+# Void Method
+
+A method that returns nothing.
+
+Example
+
+```java
+public static void print() {
+    System.out.println("Hello");
+}
+```
+
+Calling
+
+```java
+print();
+```
+
+Cannot do
+
+```java
+int x = print();   // Error
+```
+
+---
+
+# Return Method
+
+Returns a value.
+
+Example
+
+```java
+public static int maximum(int a, int b) {
+    return Math.max(a,b);
+}
+```
+
+Calling
+
+```java
+int ans = maximum(4,8);
+```
+
+---
+
