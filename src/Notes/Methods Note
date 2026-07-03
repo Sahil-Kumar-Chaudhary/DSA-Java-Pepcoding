@@ -1,571 +1,123 @@
-# 📚 DSA in Java – Methods (Functions)
+# 📚 DSA in Java – Methods (Theory Notes)
 
 ## What is a Method?
+A method (or function) is a reusable block of code that performs a specific task. It helps avoid writing the same code repeatedly and makes programs easier to understand and maintain.
 
-A **method** (also called a **function**) is a block of code that performs a specific task. Instead of writing the same code multiple times, we write it once inside a method and call it whenever needed.
+---
 
-### Advantages
+## Advantages of Methods
 - Code Reusability
-- Reduces code duplication
-- Makes code modular
-- Easy to debug and maintain
-- Improves readability
+- Reduces Code Duplication
+- Improves Readability
+- Makes Debugging Easier
+- Supports Modular Programming
 
 ---
 
-# General Syntax
-
-```java
-returnType methodName(parameters) {
-    // code
-    return value;
-}
-```
-
-Example
-
-```java
-public static int sum(int a, int b) {
-    return a + b;
-}
-```
+## Components of a Method
+- Access Modifier (public, private, protected)
+- static Keyword (allows calling without creating an object)
+- Return Type (int, double, void, etc.)
+- Method Name
+- Parameters
 
 ---
 
-# Parts of a Method
-
-```java
-public static int maximum(int x, int y)
-```
-
-## 1. Access Modifier
-
-```java
-public
-```
-
-Specifies where the method can be accessed.
-
-Common modifiers:
-- public
-- private
-- protected
+## Method Call
+A method executes only when it is called from another method or the `main()` method.
 
 ---
 
-## 2. Static Keyword
-
-```java
-static
-```
-
-A static method belongs to the class rather than an object.
-
-Since `main()` is static, it can directly call other static methods.
-
-Without `static`
-
-```java
-Methods obj = new Methods();
-obj.maximum(5,10);
-```
+## Parameters vs Arguments
+- **Parameters:** Variables declared in the method definition.
+- **Arguments:** Actual values passed while calling the method.
 
 ---
 
-## 3. Return Type
-
-```java
-int
-```
-
-Defines what the method returns.
-
-Examples:
-- int
-- double
-- char
-- boolean
-- String
-- void
+## Return Type
+The return type specifies what value a method sends back after execution.
+- `void` → Returns nothing.
+- `int`, `double`, `boolean`, etc. → Returns a value of that type.
 
 ---
 
-## 4. Method Name
-
-```java
-maximum
-```
-
-Should describe the work performed.
-
-Examples:
-- sum()
-- fact()
-- maximum()
-- print()
+## Return Statement
+- Ends the execution of a method immediately.
+- Sends a value back to the caller.
+- Every non-void method must return a value on all execution paths.
 
 ---
 
-## 5. Parameters
-
-```java
-(int x, int y)
-```
-
-Variables that receive values when the method is called.
+## Local Variables
+Variables declared inside a method are called local variables. They can only be accessed within that method.
 
 ---
 
-# Method Calling
-
-Method Definition
-
-```java
-public static void print() {
-    System.out.println("Hello");
-}
-```
-
-Method Call
-
-```java
-print();
-```
+## Variable Scope
+The scope of a local variable is limited to the method in which it is declared.
 
 ---
 
-# Parameters vs Arguments
-
-Method
-
-```java
-sum(int a, int b)
-```
-
-`a` and `b` are **Parameters**
-
-Method Call
-
-```java
-sum(5,10);
-```
-
-`5` and `10` are **Arguments**
-
-**Remember:**
-- Parameters → Variables in method definition.
-- Arguments → Actual values passed during method call.
+## Static Method
+A static method belongs to the class rather than an object. It can be called directly from `main()` without creating an object.
 
 ---
 
-# Void Method
-
-A method that returns nothing.
-
-Example
-
-```java
-public static void print() {
-    System.out.println("Hello");
-}
-```
-
-Calling
-
-```java
-print();
-```
-
-Cannot do
-
-```java
-int x = print();   // Error
-```
+## Built-in Math Methods
+Java provides useful mathematical methods such as:
+- sqrt()
+- cbrt()
+- abs()
+- min()
+- max()
+- floor()
+- round()
+- pow()
 
 ---
 
-# Return Method
+## Factorial
+Factorial of a number `n` is the product of all positive integers from `1` to `n`.
 
-Returns a value.
+Formula:
+n! = n × (n-1) × ... × 1
 
-Example
-
-```java
-public static int maximum(int a, int b) {
-    return Math.max(a,b);
-}
-```
-
-Calling
-
-```java
-int ans = maximum(4,8);
-```
+Time Complexity: O(n)
 
 ---
 
-# Return Statement
+## Combination (nCr)
+Combination represents the number of ways to choose `r` objects from `n` objects where **order does not matter**.
 
-The `return` statement immediately ends the method and sends the value back to the caller.
-
-Example
-
-```java
-return 10;
-```
-
-Everything after `return` is unreachable.
-
-Wrong
-
-```java
-return 10;
-System.out.println("Hello");
-```
-
----
-
-# Multiple Return Statements
-
-Allowed
-
-```java
-if(a>10)
-    return 10;
-else
-    return 9;
-```
-
-Every execution path of a non-void method must return a value.
-
-Wrong
-
-```java
-if(a>10)
-    return 10;
-```
-
-Compiler Error
-
-```
-Missing return statement
-```
-
----
-
-# Local Variables
-
-Variables declared inside a method are called **Local Variables**.
-
-Example
-
-```java
-public static int fact(int n) {
-    int ans = 1;
-}
-```
-
-`ans` exists only inside `fact()`.
-
----
-
-# Variable Scope
-
-Variables declared inside a method cannot be accessed outside it.
-
-Example
-
-```java
-public static void sum() {
-    int x = 5;
-}
-```
-
-Wrong
-
-```java
-System.out.println(x);
-```
-
----
-
-# Calling Methods
-
-Methods can call other methods.
-
-Example
-
-```java
-print();
-sum(5,6);
-maximum(4,9);
-```
-
----
-
-# Built-in Math Methods
-
-### Square Root
-
-```java
-Math.sqrt(25);
-```
-
-Output
-
-```
-5.0
-```
-
-### Cube Root
-
-```java
-Math.cbrt(125);
-```
-
-Output
-
-```
-5.0
-```
-
-### Absolute Value
-
-```java
-Math.abs(-50);
-```
-
-Output
-
-```
-50
-```
-
-### Maximum
-
-```java
-Math.max(10,20);
-```
-
-Output
-
-```
-20
-```
-
-### Minimum
-
-```java
-Math.min(10,20);
-```
-
-Output
-
-```
-10
-```
-
-### Floor
-
-```java
-Math.floor(2.9);
-```
-
-Output
-
-```
-2.0
-```
-
-### Round
-
-```java
-Math.round(2.6);
-```
-
-Output
-
-```
-3
-```
-
-### Power
-
-```java
-Math.pow(2,5);
-```
-
-Output
-
-```
-32.0
-```
-
----
-
-# Factorial Method
-
-```java
-public static int fact(int n){
-    int ans = 1;
-
-    for(int i=1;i<=n;i++){
-        ans *= i;
-    }
-
-    return ans;
-}
-```
-
-Example
-
-```
-5! = 120
-```
-
-Time Complexity
-
-```
-O(n)
-```
-
-Space Complexity
-
-```
-O(1)
-```
-
----
-
-# Combination (nCr)
-
-### Formula
-
-```
+Formula:
 nCr = n! / (r! × (n-r)!)
-```
-
-Java Code
-
-```java
-int ncr = fact(n)/(fact(r)*fact(n-r));
-```
-
-Example
-
-```
-5C2
-
-= 120/(2×6)
-
-= 10
-```
 
 ---
 
-# Permutation (nPr)
+## Permutation (nPr)
+Permutation represents the number of ways to arrange `r` objects from `n` objects where **order matters**.
 
-### Formula
-
-```
+Formula:
 nPr = n! / (n-r)!
-```
-
-Java Code
-
-```java
-int npr = fact(n)/fact(n-r);
-```
-
-Example
-
-```
-5P2
-
-= 120/6
-
-= 20
-```
 
 ---
 
-# Important Points
-
-- A method can call another method.
-- A method can have zero or many parameters.
-- A method can return only one value.
-- `void` methods do not return anything.
-- Non-void methods must return a value on every execution path.
-- Parameters are local variables.
-- Methods improve readability and code reuse.
-- Static methods can be called directly from `main()`.
+## Key Points
+- Methods improve code reusability.
+- A method can have zero or multiple parameters.
+- A method returns only one value.
+- `void` methods do not return any value.
+- Parameters are local to the method.
+- Static methods can be called without creating an object.
+- Every non-void method must return a value.
 
 ---
 
-# Interview Questions
-
-### 1. What is a method?
-
-A method is a reusable block of code that performs a specific task.
-
----
-
-### 2. Difference between Parameters and Arguments?
-
-Parameters are variables in the method definition.
-
-Arguments are actual values passed during the method call.
-
----
-
-### 3. Difference between `void` and `int` methods?
-
-- `void` returns nothing.
-- `int` returns an integer value.
-
----
-
-### 4. Why is `return` important?
-
-It sends a value back to the caller and immediately terminates the method.
-
----
-
-### 5. Why do we write `static`?
-
-Because `main()` is static and can directly call only static methods without creating an object.
-
----
-
-### 6. What is the time complexity of the factorial method?
-
-```
-O(n)
-```
-
----
-
-### 7. Can a method return two values?
-
-No. A Java method returns only one value directly. To return multiple values, return an object, array, or collection.
-
----
-
-### 8. What happens if a non-void method doesn't return a value?
-
-The compiler throws a **Missing return statement** error.
-
----
-
-# Quick Revision
-
-- Method = Reusable block of code.
-- `void` = No return value.
-- `return` = Sends value back.
-- Parameters = Variables.
-- Arguments = Actual values.
-- Static methods are called without creating an object.
-- Local variables exist only inside the method.
-- Factorial Time Complexity = **O(n)**.
-- Combination Formula = **n! / (r!(n-r)!)**
-- Permutation Formula = **n! / (n-r)!**
+## Interview Questions
+1. What is a method in Java?
+2. Difference between parameters and arguments?
+3. Difference between `void` and non-void methods?
+4. Why do we use the `static` keyword?
+5. What is the purpose of the `return` statement?
+6. What is the scope of a local variable?
+7. Difference between Combination (nCr) and Permutation (nPr)?
