@@ -29,4 +29,23 @@ class Linlist{
                 head = temp;
             }
         }
-}
+
+        void deletedathead(int z){
+            if(head == null){
+                System.out.print("LinkedList is Empty");
+                return;
+            }
+            head = head.next;
+            if(head== null) tail=null;
+        }
+
+        void display(){
+            Node temp = head;
+            if(head == null) return ;
+            while(temp!=null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+
+    }
