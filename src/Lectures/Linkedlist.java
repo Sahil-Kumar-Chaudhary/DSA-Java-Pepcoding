@@ -49,3 +49,22 @@ class Linlist{
         }
 
     }
+
+public class Linkedlist {
+
+    public static void displays(Node head){
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+
+    }
+    
+    public static void reversell(Node head){
+        if(head==null) return;
+        reversell(head.next);
+        System.out.print(head.data+" ");
+        
+    }
+}
