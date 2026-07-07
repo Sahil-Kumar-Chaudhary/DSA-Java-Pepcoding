@@ -10,7 +10,9 @@ class Node{
 class Linlist{
         Node head;
         Node tail;
-
+        int size;
+        
+//Add at End of linkedlist
         void addatend(int x){
             Node temp = new Node(x);
             if(tail==null){
@@ -19,7 +21,10 @@ class Linlist{
                 tail.next = temp;
                 tail = temp;
             }
+            size++;
         }
+
+//Add at HEadof linkedlist
         void addathead(int y){
             Node temp = new Node(y);
             if(head == null){
@@ -28,15 +33,78 @@ class Linlist{
                 temp.next = head;
                 head = temp;
             }
+            size++;
         }
 
-        void deletedathead(int z){
+// Insert a value on particular index.
+        void insertatpoint(int val,int idx){
+            Node temp = head;
+            if(idx<0 || idx>size){
+                System.out.println("Invalid Index");
+                return;
+            }else if(idx==size){
+                addatend(val);
+
+            }else if(idx==0){
+                addathead(val);
+            }else{
+                
+                for(int i=0;i<idx-1;i++){
+                    temp = temp.next;
+                }
+                Node t = new Node(val);
+                t.next = temp.next;
+                temp.next=t;
+                size++;
+            }
+
+        }
+
+// Delete at a particular index;
+        void deleteatindex(int idx){
+            Node temp = head;
+            if(idx<0 || idx>=size){
+                System.out.print("Invalid Index");
+                return;
+
+            }
+            if(idx==0){
+                deletedathead();
+                return;
+            }
+            for(int i=0;i<idx-1;i++){
+                temp = temp.next;
+            }
+            temp.next=temp.next.next;
+            if(idx==size) tail=temp;
+            size--;
+
+        }
+
+        
+
+        void deletedathead(){
             if(head == null){
                 System.out.print("LinkedList is Empty");
                 return;
             }
             head = head.next;
             if(head== null) tail=null;
+            size--;
+        }
+        int checknum(int a){
+            Node temp = head;
+            int idx=0;
+            // if(temp==null) return -1;
+            while(temp!=null){
+                if(temp.data==a){
+                    return idx;
+                }
+                temp=temp.next;
+                idx++;
+            }
+            return -1;
+
         }
 
         void display(){
@@ -101,6 +169,11 @@ public class Linkedlist {
         ll.display();
         System.out.print("\n");
         ll.addathead(65);
+        ll.display();
+        System.out.print("\n");
+        System.out.println(ll.checknum(80));
+        System.out.println(ll.size);
+        ll.insertatpoint(75,2);
         ll.display();
 
 
