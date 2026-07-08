@@ -76,7 +76,8 @@ class Linlist{
                 temp = temp.next;
             }
             temp.next=temp.next.next;
-            if(idx==size) tail=temp;
+            // Update tail if the last element was deleted
+            if(idx==size-1) tail=temp;
             size--;
 
         }
